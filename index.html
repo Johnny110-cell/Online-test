@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JEVISAFARE | ICT, Surveillance & Access Control Solutions</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>JEVISAFARE</h1>
+    <p>Your Trusted ICT, Surveillance & Access Control Solutions Partner</p>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#mission">Our Mission</a>
+      <a href="#contact">Contact Us</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Empowering Access. Enabling Success.</h1>
+    <p>We provide tailored ICT services(hardwares and softwares), surveillance and secure access systems that keep your business moving forward.</p>
+  </section>
+
+  <div class="content">
+    
+    <section id="mission" class="section">
+      <h2>Our Mission</h2>
+      <p>
+        At JEVISAFARE, our mission is to deliver cutting-edge digital services and access control solutions with a focus 
+        on reliability, innovation, and security. We aim to empower individuals and businesses with the tools they need to thrive in the modern world.
+      </p>
+    </section>
+
+    <section id="about" class="section">
+      <h2> About Us</h2>
+      <div class="about">
+      <div class="about-box">
+        <h3>ABout Us</h3>
+        <p> JEVISAFARE is a limited ICT company founded by the CEO D. Johnny Mwangi Kimani in 2019. We are dedicated in providing ICT solutions for smooth running of your day to day life</p>
+        </div>
+    </section>
+    <section id="services" class="section">
+      <h2>Our Services</h2>
+      <div class="services">
+        <div class="service-box">
+          <h3>ICT Solutions and Consulting</h3>
+          <p>Get expert services and advice on ICT strategies, systems integration, and digital transformation tailored to your needs.</p>
+        </div>
+        <div class="service-box">
+          <h3>Surveillance and Access Control Systems</h3>
+          <p>Design and installation of surveillance cameras, face, biometric, RFID, and smart card access systems to keep your premises secure.</p>
+        </div>
+        <div class="service-box">
+          <h3>Support & Maintenance</h3>
+          <p>Reliable technical support and maintenance plans to ensure your systems run smoothly 24/7.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact Us</h2>
+      <form id="contact-form">
+        <label>Name:</label><br>
+        <input type="text" name="name" required><br><br>
+      
+        <label>Email:</label><br>
+        <input type="email" name="email" required><br><br>
+      
+        <label>Message:</label><br>
+        <textarea name="message" required></textarea><br><br>
+      
+        <button type="submit">Send</button>
+      </form>
+      
+      <script>
+        document.getElementById('contact-form').addEventListener('submit', async function (e) {
+          e.preventDefault();
+      
+          const formData = new FormData(e.target);
+          const data = {
+            name: formData.get('name'),
+            email: formData.get('email'),
+            message: formData.get('message'),
+          };
+      
+          const response = await fetch('https://your-username.github.io/your-repo/.netlify/functions/submit-form', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+          });
+      
+          if (response.ok) {
+            alert('Thank you! Your message was submitted.');
+          } else {
+            alert('Oops! Something went wrong.');
+          }
+        });
+      </script>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2025 JEVISAFARE. All rights reserved. | Created by Johnny Mwangi Kimani</p>
+    <p>
+      <a href="#" class="social">Facebook</a> |
+      <a href="#" class="social">LinkedIn</a> |
+      <a href="#" class="social">Instagram</a>
+    </p>
+  </footer>
+
+</body>
+</html>
